@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "start": "concurrently \"cd frontend && yarn start\" \"cd backend && yarn start\""
+  },
   "dependencies": {
-    "@mui/icons-material": "^5.11.16"
+    "@mui/icons-material": "^5.11.16",
+    "concurrently": "^8.0.1"
   }
 }

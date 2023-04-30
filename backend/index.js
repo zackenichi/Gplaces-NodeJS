@@ -27,7 +27,7 @@ app.get('/places/search', async (req, res) => {
   try {
     const response = await axios.get(url);
 
-    console.log(response);
+    // console.log(response);
 
     const predictions = response.data.predictions;
 
