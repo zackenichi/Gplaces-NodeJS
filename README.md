@@ -41,6 +41,14 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Screenshots
+
+![AutocompleteSearch](https://github.com/zackenichi/Gplaces-NodeJS/blob/main/Screenshots/Screen%20Shot%202023-05-01%20at%2012.21.02%20am.png)
+
+![PlaceDetails](https://github.com/zackenichi/Gplaces-NodeJS/blob/main/Screenshots/Screen%20Shot%202023-05-01%20at%2012.21.05%20am.png)
+
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
