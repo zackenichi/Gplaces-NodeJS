@@ -8,8 +8,8 @@ const App = () => {
   const [placeId, setPlaceId] = useState('');
 
   return (
-    <div>
-      <Container maxWidth="sm">
+    <div style={{ position: 'relative', minHeight: '100vh' }}>
+      <Container maxWidth="sm" style={{ paddingBottom: '6rem' }}>
         <Box
           sx={{
             flexGrow: 1,
