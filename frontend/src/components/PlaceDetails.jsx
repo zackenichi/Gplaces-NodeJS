@@ -23,7 +23,13 @@ const PlaceDetails = ({ placeDetails }) => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 2,
+      }}
+    >
       <Typography variant="h5">{name}</Typography>
       <Typography variant="body1">{formatted_address}</Typography>
       <Typography variant="body1">{formatted_phone_number}</Typography>
@@ -47,7 +53,7 @@ const PlaceDetails = ({ placeDetails }) => {
               <img
                 src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photo.photo_reference}&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
                 alt={`placePhoto-${index}`}
-                style={{ maxWidth: '100%' }}
+                style={{ width: '100%', height: '200px', objectFit: 'cover' }}
               />
             </Grid>
           ))}
