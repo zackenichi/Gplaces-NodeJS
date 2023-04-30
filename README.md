@@ -2,7 +2,14 @@
 
 ## This app showcase how to get Google places data after a Google Places Autocomplete search
 
-You first search for a place using keywords and then places data would be displayed once an option is selected.
+1. Autocomplete Search
+2. Website link
+3. Ratings in stars
+4. Google place photos with pagination
+
+
+## How to use 
+You  search for a place using keywords and then places data would be displayed once an option is selected.
 
 ## Installation
 
@@ -10,7 +17,7 @@ You first search for a place using keywords and then places data would be displa
 2. Install dependencies: `npm install` or `yarn`
 3. Create a Google Places API key and add GPLACE_API_KEY to .env file in frontend and backend
 
-## Creating Google PLaces API key
+## Creating Google Places API key
 
 1. Create a Google Cloud Platform Account: To use the Google Places API, you need to have a Google Cloud Platform account. You can create an account by visiting the following link: https://console.cloud.google.com/freetrial.
 
@@ -32,7 +39,7 @@ I hope this helps!
 
 ## Usage
 
-1. Start the development server: `npm start` or `yarn start`
+1. Start the development server: `npm start` or `yarn start` (with concurrently, you just need to run from root directory).
 2. Open the web browser and navigate to http://localhost:3000
 
 ## Contributing
