@@ -22,6 +22,8 @@ const PlaceDetails = ({ placeDetails }) => {
     setPage(value);
   };
 
+  // console.log(rating);
+
   return (
     <Box
       sx={{
@@ -40,12 +42,18 @@ const PlaceDetails = ({ placeDetails }) => {
           </Link>
         )}
       </Typography>
-      <Rating
-        value={rating}
-        precision={0.5}
-        readOnly
-        sx={{ mt: 1, borderColor: 'yellow.500', borderWidth: 2 }}
-      />
+
+      {rating !== undefined ? (
+        <Rating
+          value={rating}
+          precision={0.5}
+          readOnly
+          sx={{ mt: 1, borderColor: 'yellow.500', borderWidth: 2 }}
+        />
+      ) : (
+        <Typography variant="body1">No rating available</Typography>
+      )}
+
       <Grid container spacing={2}>
         {photos &&
           photos.slice(startIndex, endIndex).map((photo, index) => (
