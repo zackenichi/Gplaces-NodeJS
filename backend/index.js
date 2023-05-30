@@ -47,12 +47,15 @@ app.get('/place/:placeId', async (req, res) => {
           place_id: req.params.placeId,
           fields:
             'name,formatted_address,geometry,types,photos,opening_hours,rating,website,formatted_phone_number',
-          // add any other fields you want to retrieve
           key: apiKey,
         },
       }
     );
+
     const placeData = response.data.result;
+
+    // console.log(placeData);
+
     res.send(placeData);
   } catch (error) {
     console.error(error);
