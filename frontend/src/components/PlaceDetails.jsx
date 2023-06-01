@@ -62,7 +62,11 @@ const PlaceDetails = ({ placeDetails }) => {
         {types &&
           types.map((type, index) => (
             <React.Fragment key={index}>
-              <Typography variant="body1" style={{ display: 'inline' }}>
+              <Typography
+                variant="body1"
+                component="span"
+                style={{ display: 'inline' }}
+              >
                 {type}
               </Typography>
               {index !== types.length - 1 && ', '}
