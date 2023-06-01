@@ -9,7 +9,10 @@ const PlaceDetails = ({ placeDetails }) => {
     website,
     rating,
     photos,
+    types,
   } = placeDetails;
+
+  // console.log(types);
 
   const [page, setPage] = useState(1);
   const photosPerPage = 6;
@@ -53,6 +56,19 @@ const PlaceDetails = ({ placeDetails }) => {
       ) : (
         <Typography variant="body1">No rating available</Typography>
       )}
+
+      <Typography variant="body1" style={{ display: 'inline' }}>
+        Types:{' '}
+        {types &&
+          types.map((type, index) => (
+            <React.Fragment key={index}>
+              <Typography variant="body1" style={{ display: 'inline' }}>
+                {type}
+              </Typography>
+              {index !== types.length - 1 && ', '}
+            </React.Fragment>
+          ))}
+      </Typography>
 
       <Grid container spacing={2}>
         {photos &&
