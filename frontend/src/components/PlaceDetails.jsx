@@ -9,7 +9,10 @@ const PlaceDetails = ({ placeDetails }) => {
     website,
     rating,
     photos,
+    types,
   } = placeDetails;
+
+  // console.log(types);
 
   const [page, setPage] = useState(1);
   const photosPerPage = 6;
@@ -21,6 +24,8 @@ const PlaceDetails = ({ placeDetails }) => {
   const handlePageChange = (event, value) => {
     setPage(value);
   };
+
+  // console.log(rating);
 
   return (
     <Box
@@ -40,12 +45,35 @@ const PlaceDetails = ({ placeDetails }) => {
           </Link>
         )}
       </Typography>
-      <Rating
-        value={rating}
-        precision={0.5}
-        readOnly
-        sx={{ mt: 1, borderColor: 'yellow.500', borderWidth: 2 }}
-      />
+
+      {rating !== undefined ? (
+        <Rating
+          value={rating}
+          precision={0.5}
+          readOnly
+          sx={{ mt: 1, borderColor: 'yellow.500', borderWidth: 2 }}
+        />
+      ) : (
+        <Typography variant="body1">No rating available</Typography>
+      )}
+
+      <Typography variant="body1" style={{ display: 'inline' }}>
+        Types:{' '}
+        {types &&
+          types.map((type, index) => (
+            <React.Fragment key={index}>
+              <Typography
+                variant="body1"
+                component="span"
+                style={{ display: 'inline' }}
+              >
+                {type}
+              </Typography>
+              {index !== types.length - 1 && ', '}
+            </React.Fragment>
+          ))}
+      </Typography>
+
       <Grid container spacing={2}>
         {photos &&
           photos.slice(startIndex, endIndex).map((photo, index) => (

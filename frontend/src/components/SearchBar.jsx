@@ -4,7 +4,7 @@ import { Autocomplete, TextField } from '@mui/material';
 const SEARCH_ENDPOINT = 'http://localhost:5000/places/search';
 // const PLACE_ENDPOINT = 'http://localhost:5000/place/';
 
-const DEBOUNCE_TIME = 3000;
+const DEBOUNCE_TIME = 1000;
 
 function SearchBar({ setPlaceId }) {
   const [inputValue, setInputValue] = useState('');
