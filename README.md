@@ -54,6 +54,10 @@ Please make sure to update tests as appropriate.
 
 ![PlaceDetails](https://github.com/zackenichi/Gplaces-NodeJS/blob/main/Screenshots/Screen%20Shot%202023-05-01%20at%2012.21.05%20am.png)
 
+## Other notes
+
+The backend can be removed and transformed into firebase cloud functions.
+
 
 
 ## License
