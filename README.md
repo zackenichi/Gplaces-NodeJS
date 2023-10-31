@@ -57,6 +57,7 @@ Please make sure to update tests as appropriate.
 ## Other notes
 
 The backend can be removed and transformed into firebase cloud functions.
+We can also convert to NextJS to remove the backend and concurrently.
 
 
 
